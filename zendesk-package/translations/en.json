@@ -1,8 +1,13 @@
 {
     "app": {
         "name": "End User Labels",
-        "short_description": "Change ticket field labels from agent view to end user view.",
-        "long_description": "Change ticket field labels from agent view to end user view for consistent user experience within agent workspace in instances with complex conditional fields and multiple variations of the same input level.",
+        "short_description": "Change field labels from agent view to customer view.",
+        "long_description": "Allow admins to change ticket field labels from agent view to customer view for consistent user experience within agent workspace.\n\nThis is particularly useful in instances with complex conditional fields and multiple variations of the same input level.\n\nBuilt by aidvisor, a dedicated developer and consultant on a mission to extend Zendesk functionality to meet all business needs. Contact us for feature requests and customisation.",
         "installation_instructions": "Simply click install."
+    },
+    "parameters": {
+        "Enable for ticket custom fields": {
+            "label": "Enable for ticket custom fields"
+        }
     }
 }

@@ -6,7 +6,7 @@
         "url": "https://aidvisor.eu"
     },
     "defaultLocale": "en",
-    "private": true,
+    "private": false,
     "singleInstall": true,
     "location": {
         "support": {

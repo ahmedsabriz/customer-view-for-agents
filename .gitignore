@@ -34,5 +34,4 @@ yarn-error.log*
 .vercel
 
 # Custom
-.*
-*/tmp/
+/tmp/
