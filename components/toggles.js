@@ -17,7 +17,7 @@ export default function Toggles() {
             if (ticketCustomFields === null) {
                 client.metadata().then(
                     (metadata) => {
-                        setTicketCustomFields(metadata.settings.ticketCustomFields);
+                        setTicketCustomFields(metadata.settings['Enable for ticket custom fields']);
                         setAppId(metadata.appId);
                     }
                 );
@@ -42,9 +42,10 @@ export default function Toggles() {
             () => {
                 setTicketCustomFields(checked);
             },
-            () => {
+            (response) => {
                 client.invoke('notify', 'Only Admins can change this setting', 'error', { sticky: true });
                 client.invoke('hide');
+                console.log(response.code, response.text)
             }
         );
     }
