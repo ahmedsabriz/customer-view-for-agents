@@ -31,10 +31,10 @@ export default function Toggles() {
             const message = document.getElementById('ticketCustomFieldsMessage');
             if (ticketCustomFields) {
                 toggle.setAttribute('checked', ticketCustomFields);
-                message.innerHTML('Showing end user labels');
+                message.innerHTML = 'Showing end user labels';
             } else {
                 toggle.removeAttribute('checked');
-                message.innerHTML('Showing agent labels');
+                message.innerHTML = 'Showing agent labels';
             }
 
             updateLabels(client, ticketCustomFields);
