@@ -43,9 +43,11 @@ export default function Toggles() {
                 setTicketCustomFields(checked);
             },
             (response) => {
+                console.log('appId', appId);
+                console.log(JSON.parse(response));
                 client.invoke('notify', 'Only Admins can change this setting', 'error', { sticky: true });
                 client.invoke('hide');
-                console.log(response.code, response.text)
+                console.log(response.code, response.text);
             }
         );
     }
