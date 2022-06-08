@@ -1,0 +1,8 @@
+{
+    "app": {
+        "name": "End User Labels",
+        "short_description": "Change ticket field labels from agent view to end user view.",
+        "long_description": "Change ticket field labels from agent view to end user view for consistent user experience within agent workspace in instances with complex conditional fields and multiple variations of the same input level.",
+        "installation_instructions": "Simply click install."
+    }
+}

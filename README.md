@@ -1,33 +1,9 @@
-This is an app scaffold integrating Next.js with the Zendesk App Framework.
+This is a zendesk support app built with Next.js and the Zendesk App Framework.
 
-## Getting Started 
+## Description
 
-### Prerequisite
-Must have Zendesk App Tools installed. If needed, see these [docs](https://developer.zendesk.com/documentation/apps/zendesk-app-tools-zat/installing-and-using-the-zendesk-apps-tools/) to get started.
+Change ticket field labels from agent view to end user view for consistent user experience within agnet workspace in instances with complex conditional fields and multiple variations of the same input level. The functionality is enabled by default after installation. It can be disabled and re-enabled using a toggle in the ticket sidebar by admins only.
 
-1. Clone or fork this repo
-2. `cd` into the `app_local` directory
-3. Run `yarn install` or `npm install`
+### Use Cases
 
-In order to run the app locally on your Zendesk instance, first run the development server for Next.js. You need to run the following command on the parent directory _sample-zaf-next_
-
-```bash
-cd..
-npm run dev
-# or
-yarn dev
-```
-
-While you Next.js development server is running, run the following command to serve your app to your Zendesk instance.
-
-```
-zat server
-```
-
-Current location of this app is in the *Top Bar*. This can be changed in the manifest file.
-
-You can start editing the page by modifying `pages/index.js`. You will need to import useZAFClient into any pages/components where requests/actions to the client will be made. The page auto-updates as you edit the file. 
-
-After deployment be sure to update the location url to where your app is hosted.
-
-Happy Coding! 🥳
+Zendesk instances with complex conditional fields duplicated  and edited to add/remove options based on other field values. For example, 'Payment(B2C)' drop-down field contains 'Credit Card' and 'Cash' options while 'Payment(B2B)' drop-down field contains 'Credit Card' and 'Bank Transfer' options. One of the fields will be displayed based on the response to another field 'Customer Type' using a conditional ticket form. However, using the app, both fields can display the same end user label 'Payment' to be both to end users in ticket form and agents in agent workspace while admins can see the original suffixed name in admin panel.

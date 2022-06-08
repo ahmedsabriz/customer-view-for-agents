@@ -1,21 +1,17 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react';
 
 let zafClient = null;
 
-export function useZafClient() {
-  const [client, setClient] = useState(zafClient)
+export default function useZafClient() {
+    const [client, setClient] = useState(zafClient)
 
-  useEffect(() => {
-    // check to make sure we are not already using ZAF client OR that the client is not undefined
-    if (!client && typeof window.ZAFClient !== 'undefined') {
-      // save the zafClient to global scope so that it can be referenced without re-initialization later
-      zafClient = window.ZAFClient.init()
+    useEffect(() => {
+        if (!client && typeof window.ZAFClient !== 'undefined') {
+            zafClient = window.ZAFClient.init();
+            setClient(zafClient);
+            zafClient.invoke('resize', { width: '100%', height: '50px' });
+        }
+    }, [client]);
 
-      // set it to state
-      setClient(zafClient)
-      zafClient.invoke('resize', { height: '400px' })
-    }
-  }, [client])
-
-  return client
+    return client;
 }
