@@ -1,10 +1,10 @@
-export default function settings(appId, enableOrDisable) {
+export default function settings(installationId, enableOrDisable) {
     return {
-        url: `/api/v2/apps/installations/${appId}.json`,
+        url: `/api/v2/apps/installations/${installationId}.json`,
         type: 'PUT',
         data: JSON.stringify({
             settings: {
-                ticketCustomFields: enableOrDisable
+                "Enable for ticket custom fields": enableOrDisable
             }
         }),
         dataType: 'json',

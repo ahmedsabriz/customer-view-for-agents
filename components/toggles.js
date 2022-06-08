@@ -9,7 +9,7 @@ export default function Toggles() {
     const client = useZafClient();
 
     const [ticketCustomFields, setTicketCustomFields] = useState(null);
-    const [appId, setAppId] = useState(null);
+    const [installationId, setInstallationId] = useState(null);
 
     useEffect(() => {
 
@@ -18,7 +18,11 @@ export default function Toggles() {
                 client.metadata().then(
                     (metadata) => {
                         setTicketCustomFields(metadata.settings['Enable for ticket custom fields']);
-                        setAppId(metadata.appId);
+                        client.request(`/api/v2/apps/installations?app_id=${metadata.appId}`).then(
+                            (response) => {
+                                setInstallationId(response.installations[0].id);
+                            }
+                        );
                     }
                 );
             }
@@ -38,16 +42,13 @@ export default function Toggles() {
         const toggle = document.getElementById('ticketCustomFields');
         const checked = toggle.hasAttribute('checked');
 
-        client.request(settings(appId, checked)).then(
+        client.request(settings(installationId, !checked)).then(
             () => {
-                setTicketCustomFields(checked);
+                setTicketCustomFields(!checked);
             },
-            (response) => {
-                console.log('appId', appId);
-                console.log(JSON.parse(response));
+            () => {
                 client.invoke('notify', 'Only Admins can change this setting', 'error', { sticky: true });
                 client.invoke('hide');
-                console.log(response.code, response.text);
             }
         );
     }
