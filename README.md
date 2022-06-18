@@ -1,9 +1,30 @@
-This is a zendesk support app built with Next.js and the Zendesk App Framework.
+Aidvisor is a solution provider for Zendesk products bulding on its developer platform and maximising its utlity to solve both common and unique use cases for the community.
+## Use Case
+Admins who manage complex ticket fields and conditional forms may use 'Title shown to customers' to ensure consistent customer experience by hiding more functional titles meant for efficient field management. However, in a growing support team, agent experience is also important and the same level of consistency is needed.
 
-## Description
+The app allows admins to toggle 'Title shown to customers' for agents too. Agents can now enjoy a seamless experience away from cryptically-named custom fields managed by admins like clockwork.
 
-Change ticket field labels from agent view to end user view for consistent user experience within agnet workspace in instances with complex conditional fields and multiple variations of the same input level. The functionality is enabled by default after installation. It can be disabled and re-enabled using a toggle in the ticket sidebar by admins only.
+Even if a field is not meant to be viewed by customers, it can accept a customer title if 'customer view' is enabled, and persist it after 'customer view' is disabled.
+## Features
+* Ticket sidebar UI to indicate the displayed title (agent/customer)
+* Toggle permission reserved to admins
 
-### Use Cases
+## Install
+1. Install the app
+2. Check 'Enable for ticket custom fields' to activate customer view
+## Set customer view
+1. Go to Admin Center
+2. Select Objects and rules > Tickets > Fields
+3. Select the desired custom field
+4. If permission is set to 'Agents can edit', select 'Customers can view'
+5. Enter 'Title shown to customers', which the app can show to agents too
+6. Save
+7. If you changed permission in step 4, select the field again and restore the permission to 'agents can edit'
+8. Save
+## See it in action
+1. Open an existing or new ticket
+2. Observe the custom field titles showing customer view
+3. Locate the app in the right sidebar
+4. Toggle the view between agent and customer view as needed
 
-Zendesk instances with complex conditional fields duplicated  and edited to add/remove options based on other field values. For example, 'Payment-B2C' drop-down field contains 'Credit Card' and 'Cash' options while 'Payment-B2B' drop-down field contains 'Credit Card' and 'Bank Transfer' options. One of the fields will be displayed based on the response to another field 'Customer Type' using a conditional ticket form. However, using the app, both fields can display the same end user label 'Payment' to both end user in ticket form and agents in agent workspace, while admins can see the original suffixed label in admin panel.
+We love feedback and feature requests. Have a unique use case that requires a custom solution? We are here to help.
