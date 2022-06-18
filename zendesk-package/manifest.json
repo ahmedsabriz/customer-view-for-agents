@@ -1,5 +1,5 @@
 {
-    "name": "End User Labels",
+    "name": "Customer View for Agents",
     "author": {
         "name": "aidvisor",
         "email": "contact@aidvisor.eu",
@@ -22,11 +22,13 @@
     },
     "version": "1.0",
     "frameworkVersion": "2.0",
-    "parameters": [{
-        "name": "Enable for ticket custom fields",
-        "type": "checkbox",
-        "required": false,
-        "secure": false,
-        "default": true
-    }]
+    "parameters": [
+        {
+            "name": "Enable for ticket custom fields",
+            "type": "checkbox",
+            "required": false,
+            "secure": false,
+            "default": true
+        }
+    ]
 }

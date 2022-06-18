@@ -31,10 +31,10 @@ export default function Toggles() {
             const message = document.getElementById('ticketCustomFieldsMessage');
             if (ticketCustomFields) {
                 toggle.setAttribute('checked', ticketCustomFields);
-                message.innerHTML = 'Showing end user labels';
+                message.innerHTML = 'Showing customer view';
             } else {
                 toggle.removeAttribute('checked');
-                message.innerHTML = 'Showing agent labels';
+                message.innerHTML = 'Showing agent view';
             }
 
             updateLabels(client, ticketCustomFields);
@@ -60,7 +60,7 @@ export default function Toggles() {
         <div className="App">
             <Field onClick={() => { ticketCustomFieldsToggleHandler() }} >
                 <Toggle id='ticketCustomFields'>
-                    <Label>Ticket Custom Fields</Label>
+                    <Label>Ticket custom fields</Label>
                     <Message id='ticketCustomFieldsMessage'></Message>
                 </Toggle>
             </Field>

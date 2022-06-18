@@ -1,13 +1,13 @@
 {
     "app": {
-        "name": "End User Labels",
-        "short_description": "Change field labels from agent view to customer view.",
-        "long_description": "Allow admins to change ticket field labels from agent view to customer view for consistent user experience within agent workspace.\n\nThis is particularly useful in instances with complex conditional fields and multiple variations of the same input level.\n\nBuilt by aidvisor, a dedicated developer and consultant on a mission to extend Zendesk functionality to meet all business needs. Contact us for feature requests and customisation.",
-        "installation_instructions": "Simply click install."
-    },
-    "parameters": {
-        "Enable for ticket custom fields": {
-            "label": "Enable for ticket custom fields"
+        "name": "Customer View for Agents",
+        "short_description": "Change field title from agent view to customer view.",
+        "long_description": "Aidvisor is a solution provider for Zendesk products bulding on its developer platform and maximising its utlity to solve both common and unique use cases for the community.\n## Use Case\nAdmins who manage complex ticket fields and conditional forms may use 'Title shown to customers' to ensure consistent customer experience by hiding more functional titles meant for efficient field management. However, in a growing support team, agent experience is also important and the same level of consistency is needed.\n\nThe app allows admins to toggle 'Title shown to customers' for agents too. Agents can now enjoy a seamless experience away from cryptically-named custom fields managed by admins like clockwork.\n\nEven if a field is not meant to be viewed by customers, it can accept a customer title if 'customer view' is enabled, and persist it after 'customer view' is disabled.\n## Features\n* Ticket sidebar UI to indicate the displayed title (agent/customer)\n* Toggle permission reserved to admins\n\nWe love feedback and feature requests. Have a unique use case that requires a custom solution? We are here to help.",
+        "installation_instructions": "## Install\n1. Install the app\n2. Check 'Enable for ticket custom fields' to activate customer view\n\n## Set customer view\n 1. Go to Admin Center\n2. Select Objects and rules > Tickets > Fields\n3. Select the desired custom field\n4. If permission is set to 'Agents can edit', select 'Customers can view'\n5. Enter 'Title shown to customers', which the app can show to agents too\n6. Save\n7. If you changed permission in step 4, select the field again and restore the permission to 'Agents can edit'\n8. Save\n\n## See it in action\n1. Open an existing or new ticket\n2. Observe the custom field titles showing customer view\n3. Locate the app in the right sidebar\n4. Toggle the view between agent and customer view as needed",
+        "parameters": {
+            "Enable for ticket custom fields": {
+                "label": "Enable for ticket custom fields"
+            }
         }
     }
 }
