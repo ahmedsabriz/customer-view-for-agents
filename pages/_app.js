@@ -1,10 +1,8 @@
 import '@zendeskgarden/css-bedrock';
 import '../styles/global.css';
 import Script from 'next/script';
-import useZafClient from '../utils/zafClient';
 
 function App({ Component, pageProps }) {
-    useZafClient();
 
     return (
         <>

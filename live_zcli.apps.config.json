@@ -1,1 +1,7 @@
-{"app_id":827695,"installation_id":7283137575321,"parameters":{"name":"End User Labels","Enable for ticket custom fields":true}}
+{
+    "app_id": 827695,
+    "installation_id": 7283137575321,
+    "parameters": {
+        "Enable for ticket custom fields": true
+    }
+}

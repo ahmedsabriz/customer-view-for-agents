@@ -1,10 +1,10 @@
-Aidvisor is a solution provider for Zendesk products bulding on its developer platform and maximising its utlity to solve both common and unique use cases for the community.
+Aidvisor is a solution provider for Zendesk products building on its developer platform and maximising its utility to solve both common and unique use cases for the community.
 ## Use Case
 Admins who manage complex ticket fields and conditional forms may use 'Title shown to customers' to ensure consistent customer experience by hiding more functional titles meant for efficient field management. However, in a growing support team, agent experience is also important and the same level of consistency is needed.
 
-The app allows admins to toggle 'Title shown to customers' for agents too. Agents can now enjoy a seamless experience away from cryptically-named custom fields managed by admins like clockwork.
+The app allows admins to toggle 'Title shown to customers' for agents too. Agents can now enjoy a seamless experience away from cryptically named custom fields managed by admins like clockwork.
 
-Even if a field is not meant to be viewed by customers, it can accept a customer title if 'customer view' is enabled, and persist it after 'customer view' is disabled.
+Even if a field is not meant to be viewed by customers, it can accept a customer title if 'customer view' is enabled and persist it after 'customer view' is disabled.
 ## Features
 * Ticket sidebar UI to indicate the displayed title (agent/customer)
 * Toggle permission reserved to admins
@@ -27,4 +27,4 @@ Even if a field is not meant to be viewed by customers, it can accept a customer
 3. Locate the app in the right sidebar
 4. Toggle the view between agent and customer view as needed
 
-We love feedback and feature requests. Have a unique use case that requires a custom solution? We are here to help.
+We love feedback and feature requests. Do you have a unique use case that requires a custom solution? We are here to help.

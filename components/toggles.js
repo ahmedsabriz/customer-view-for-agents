@@ -41,6 +41,12 @@ export default function Toggles() {
         }
     }, [client, ticketCustomFields]);
 
+    if (client) {
+        client.on('ticket.form.id.changed', function (e) {
+            return updateLabels(client, ticketCustomFields);
+        });
+    }
+
     function ticketCustomFieldsToggleHandler() {
         const toggle = document.getElementById('ticketCustomFields');
         const checked = toggle.hasAttribute('checked');
